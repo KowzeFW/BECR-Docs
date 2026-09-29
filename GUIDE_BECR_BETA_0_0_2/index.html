@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Guide - BECR Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">BECR Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../Red/index.html" class="nav-link">Page d'acceuil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active" aria-current="page">Guide</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Red/index.html" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#guide-becr-beta-002" class="nav-link">Guide BECR — bêta 0.0.2</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#installer-minecraft-et-minescript" class="nav-link">Installer Minecraft et Minescript</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installer-becr" class="nav-link">Installer BECR</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reperer-la-fenetre" class="nav-link">Repérer la fenêtre</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creer-un-profil-et-un-bouton" class="nav-link">Créer un profil et un bouton</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ajouter-et-modifier-des-commandes" class="nav-link">Ajouter et modifier des commandes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ranger-les-boutons" class="nav-link">Ranger les boutons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lancer-un-evenement" class="nav-link">Lancer un événement</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#en-cas-de-probleme" class="nav-link">En cas de problème</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="guide-becr-beta-002">Guide BECR — bêta 0.0.2</h1>
+<p>BECR permet aux animateurs de lancer des commandes Minecraft avec des boutons. Chaque bouton peut enchaîner plusieurs commandes avec des temps d’attente.</p>
+<p><strong>Configuration testée :</strong> Minecraft Java 1.21.8, Fabric, Minescript 5.0b11 for Fabric 1.21.8. Nous n’avons pas vérifié d’autres versions.</p>
+<h2 id="installer-minecraft-et-minescript">Installer Minecraft et Minescript</h2>
+<ol>
+<li>Installez <a href="https://www.curseforge.com/download/app">CurseForge</a>, puis ouvrez Minecraft dans l’application.</li>
+<li>Créez ou choisissez un profil Minecraft <strong>1.21.8 avec Fabric</strong>.</li>
+<li>Dans ce profil, avec <strong>Add Content / Ajouter du contenu</strong>, ajoutez <strong>Minescript 5.0b11 for Fabric 1.21.8</strong> et <strong>Fabric API</strong> compatible avec Minecraft 1.21.8. Vérifiez les versions des fichiers avant de les installer.</li>
+<li>Si Python 3 n’est pas déjà installé, installez-le depuis le <a href="https://www.python.org/downloads/">site officiel</a> ou le Microsoft Store.</li>
+<li>Démarrez Minecraft depuis ce profil CurseForge au moins une fois. Minescript doit créer son dossier, notamment le fichier <code>config.txt</code>.</li>
+</ol>
+<p>Si votre profil avec Minescript fonctionne déjà, gardez-le.</p>
+<h2 id="installer-becr">Installer BECR</h2>
+<ol>
+<li>Téléchargez et lancez <strong>BECR-Beta-0.0.2-Setup.exe</strong>. Suivez les étapes de l’installateur, puis ouvrez BECR avec le raccourci créé.</li>
+<li>Au premier démarrage, BECR demande de choisir votre dossier <strong><code>minescript</code> existant</strong>. Dans CurseForge, ouvrez le dossier du profil Minecraft que vous utilisez, puis choisissez son dossier <code>minescript</code> : c’est celui qui contient <code>config.txt</code>. <strong>Ne choisissez pas le dossier BECR.</strong></li>
+<li>BECR place <code>console_listener.py</code> dans ce dossier et prépare son démarrage automatique. Vous n’avez normalement <strong>pas besoin de copier ce fichier ni de taper <code>\console_listener</code></strong> dans le chat.</li>
+<li>Lancez Minecraft avec ce profil et rejoignez un monde ou votre serveur. Si le jeu était déjà ouvert lors de l’installation de BECR, fermez-le puis relancez-le avant de vérifier la connexion.</li>
+<li>Dans le chat Minecraft, BECR affiche normalement un message avec <strong><code>[BECR]</code> en orange</strong> et le texte suivant en blanc. Dans la fenêtre BECR, attendez <strong>« ● Connecté »</strong> en haut à droite.</li>
+</ol>
+<p>BECR ne remplace pas automatiquement une autre règle de démarrage présente dans Minescript. S’il trouve un ancien démarrage MCECR, il vous demande avant de le remplacer et conserve une sauvegarde. Pour une autre règle déjà présente, suivez le message affiché plutôt que de modifier le fichier vous-même.</p>
+<h2 id="reperer-la-fenetre">Repérer la fenêtre</h2>
+<ul>
+<li><strong>Profil :</strong> groupe de boutons pour un événement.</li>
+<li><strong>Event :</strong> mode pour lancer les boutons dans Minecraft.</li>
+<li><strong>Édition :</strong> mode pour préparer profils et boutons ; cliquer sur un bouton dans ce mode ne le lance pas.</li>
+<li><strong>● Connecté / ● Non connecté :</strong> état de la communication avec Minecraft.</li>
+<li><strong>Journal des commandes :</strong> messages en bas de la fenêtre pour suivre ce qui se passe.</li>
+</ul>
+<h2 id="creer-un-profil-et-un-bouton">Créer un profil et un bouton</h2>
+<ol>
+<li>Passez en mode <strong>Édition</strong>. Cliquez sur <strong>Nouveau profil</strong>, donnez-lui un nom, puis choisissez-le dans le menu <strong>Profil</strong>.</li>
+<li>Cliquez sur <strong>+ Action</strong> : une action est un bouton. Donnez-lui un nom et, si vous le souhaitez, une couleur avec <strong>Couleur du bouton</strong>.</li>
+<li>Ajoutez ses commandes comme expliqué ci-dessous, puis cliquez sur <strong>Enregistrer l’action</strong>.</li>
+</ol>
+<p>Un bouton sans commande peut être enregistré, mais il ne lancera rien. Les profils sont conservés dans le dossier <code>profils</code> de BECR : gardez-en une copie avant une mise à jour ou un changement d’ordinateur. Ne publiez pas vos profils personnels par mégarde.</p>
+<h2 id="ajouter-et-modifier-des-commandes">Ajouter et modifier des commandes</h2>
+<p>Chaque <strong>étape</strong> est une commande accompagnée, si besoin, d’un temps d’attente avant son lancement.</p>
+<ol>
+<li>Écrivez une commande dans <strong>Commande Minecraft (sans /)</strong>, par exemple <code>say Début de l'événement</code>. Ne mettez pas <code>/</code> au début.</li>
+<li>Dans <strong>Délai avant (s)</strong>, mettez <code>0</code> pour ne pas demander d’attente, ou indiquez un nombre de secondes entre <code>0</code> et <code>86400</code>.</li>
+<li>Cliquez sur <strong>Ajouter l’étape</strong>. Répétez pour les autres commandes ; elles seront lancées dans l’ordre de la liste.</li>
+<li>Pour changer une étape, sélectionnez sa ligne, corrigez la commande ou le délai, puis cliquez sur <strong>Modifier l’étape</strong>. La sélection reste visible quand vous cliquez dans un autre champ.</li>
+<li>Pour enlever une étape, sélectionnez-la et cliquez sur <strong>Supprimer l’étape sélectionnée</strong>. Terminez toujours par <strong>Enregistrer l’action</strong>.</li>
+</ol>
+<p>Exemple : <code>say Début de l'événement</code> avec <code>0</code> seconde, puis <code>say Deuxième annonce</code> avec <code>5</code> secondes. BECR attendra le délai de la deuxième étape avant de lancer la seconde annonce. L’éditeur peut signaler certaines erreurs et proposer <strong>Appliquer la suggestion</strong>, mais ne garantit pas qu’une commande fonctionnera dans Minecraft.</p>
+<h2 id="ranger-les-boutons">Ranger les boutons</h2>
+<p>En mode <strong>Édition</strong>, attrapez <strong>« ↔ Déplacer ↕ »</strong> pour déplacer un bouton. <strong>Ranger en grille</strong> remet tous les boutons en place et remplace leurs positions choisies à la main. <strong>Éditer</strong> rouvre un bouton ; <strong>Suppr.</strong> le supprime après confirmation.</p>
+<h2 id="lancer-un-evenement">Lancer un événement</h2>
+<ol>
+<li>Lancez Minecraft depuis le bon profil CurseForge et rejoignez le monde ou serveur. Attendez que BECR indique <strong>« ● Connecté »</strong>.</li>
+<li>Choisissez le bon <strong>Profil</strong>, puis passez en mode <strong>Event</strong>.</li>
+<li>Cliquez <strong>une seule fois</strong> sur le bouton voulu et consultez le <strong>Journal des commandes</strong>. Les commandes sont vraiment envoyées au jeu : vérifiez leur résultat dans Minecraft.</li>
+</ol>
+<p>Testez vos boutons dans un monde adapté avant un événement en direct.</p>
+<h2 id="en-cas-de-probleme">En cas de problème</h2>
+<ul>
+<li><strong>« ● Non connecté » :</strong> vérifiez le bon profil CurseForge, que vous avez rejoint un monde, puis redémarrez Minecraft si BECR a été installé alors que le jeu était ouvert. Vérifiez que le dossier <code>minescript</code> choisi lors du premier démarrage est celui du profil utilisé.</li>
+<li><strong>BECR redemande un dossier :</strong> sélectionnez le dossier <code>minescript</code> existant qui contient <code>config.txt</code>, pas le dossier du logiciel BECR.</li>
+<li><strong>Minescript ne fonctionne pas :</strong> vérifiez Minecraft 1.21.8, Fabric, Minescript 5.0b11 pour Fabric 1.21.8, Fabric API compatible et Python 3.</li>
+<li><strong>Un bouton ne fait rien :</strong> vérifiez que BECR indique « ● Connecté », que vous êtes en mode Event et que le bouton contient une commande. Regardez le journal.</li>
+<li><strong>Une commande ne marche pas :</strong> retirez le <code>/</code> initial dans BECR et vérifiez sa syntaxe ainsi que vos permissions dans Minecraft. Le journal peut indiquer qu’une commande a été envoyée sans prouver qu’elle a eu l’effet attendu.</li>
+<li><strong>Un profil manque :</strong> vérifiez vos fichiers dans le dossier <code>profils</code> de BECR et restaurez votre sauvegarde si nécessaire.</li>
+</ul>
+<p>Pour signaler un bug, notez le profil, le bouton, ce que vous attendiez, ce qui s’est produit et le message du journal BECR.</p>
+<p><strong>Avant publication :</strong> refaire le parcours sur l’installateur final 0.0.2 dans un profil CurseForge propre pour confirmer le choix du dossier, la copie de <code>console_listener.py</code> et le démarrage automatique.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
